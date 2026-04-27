@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Greeting Card Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Interactive Greeting Card Generator</h1>
+        <p>Create beautiful personalized greeting cards with dark themes</p>
+    </header>
+    
+    <div class="container">
+        <div class="left-column">
+            <div class="section">
+                <h2>Choose Your Greeting Type</h2>
+                <div class="greeting-options">
+                    <div class="greeting-option" data-greeting="Happy Birthday">Happy Birthday</div>
+                    <div class="greeting-option" data-greeting="Happy Teacher's Day">Happy Teacher's Day</div>
+                    <div class="greeting-option" data-greeting="Happy Independence Day">Happy Independence Day</div>
+                    <div class="greeting-option" data-greeting="Happy Republic Day">Happy Republic Day</div>
+                </div>
+                
+                <div class="custom-input">
+                    <input type="text" id="custom-greeting" placeholder="Or create your own greeting...">
+                    <button id="add-custom">Add</button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Customize Your Card</h2>
+                
+                <div class="form-group">
+                    <label for="user-image">Upload Your Image (Optional)</label>
+                    <div class="file-upload">
+                        <div class="file-upload-btn">Choose Image</div>
+                        <input type="file" id="user-image" accept="image/*">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-message">Your Personal Message</label>
+                    <textarea id="user-message" placeholder="Write your heartfelt message here..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipient-name">Recipient's Name (Optional)</label>
+                    <input type="text" id="recipient-name" placeholder="Enter name">
+                </div>
+                
+                <button id="generate-btn" class="generate-btn">Generate Greeting Card</button>
+                
+                
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="section">
+                <h2>Preview Your Card</h2>
+                <div class="preview-card">
+                    <div id="preview-default">Your card preview will appear here after generation</div>
+                    <div id="preview-content" class="hidden">
+                        <div class="preview-title" id="preview-greeting"></div>
+                        <img id="preview-image" class="preview-image" src="" alt="Uploaded Image">
+                        <div class="preview-message" id="preview-message"></div>
+                        <div id="preview-signature"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy;Greeting Card Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
