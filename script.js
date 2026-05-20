@@ -109,3 +109,48 @@
             });
         });
     
+
+        // DOWNLOAD CARD
+
+const downloadBtn = document.getElementById("download-btn");
+
+downloadBtn.addEventListener("click", async () => {
+
+    // Select preview card
+    const card = document.querySelector(".preview-card");
+
+    // Change button text while generating
+    downloadBtn.innerText = "Generating...";
+
+    try {
+
+        // Convert card to canvas
+        const canvas = await html2canvas(card, {
+            scale: 4,
+            useCORS: true,
+            backgroundColor: null
+        });
+
+        // Convert canvas to image
+        const image = canvas.toDataURL("image/png");
+
+        // Create temporary download link
+        const link = document.createElement("a");
+
+        link.href = image;
+
+        link.download = "greeting-card.png";
+
+        // Trigger download
+        link.click();
+
+    } catch(error) {
+
+        console.log("Download Failed:", error);
+
+    }
+
+    // Restore button text
+    downloadBtn.innerText = "Download Card";
+
+});
