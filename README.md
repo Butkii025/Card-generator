@@ -39,14 +39,3 @@ Card Generator/
 ```
 
 ---
-
-## 🔮 Future Improvements
-- Add more greeting templates.  
-- Export cards as downloadable images or PDFs.  
-- Support multiple themes (light/dark/custom).  
-- Social media sharing integration.  
-
----
-
-## 📜 License
-This project is open-source. You are free to use, modify, and distribute it under the MIT License.
